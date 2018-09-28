@@ -1,0 +1,24 @@
+<div>
+  <button class="downloadReportBtn" (click)="downloadReport()">Download Report</button>
+  </div>
+<div class="table-div">
+  <table width="75%" border="1" align="center" class="orderDetailsTable" >
+    <tr >
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Created-till-now</th>
+      <th>Predicted</th>
+      <th>Status</th>
+    </tr>
+    
+    <tr *ngFor="let item of orderDetails">
+      <td>{{item['itemName']}}</td>
+      <td>{{item['quantity']}}</td>
+      <td>{{item['createdItems']}}</td>
+      <td>{{item['predictedItems']}}</td>
+      <td>
+        <button class="btn" (click)="orderServed(item.itemName,item.quantity)">DONE</button>
+      </td>
+    </tr>
+    </table>
+</div>

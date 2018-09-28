@@ -1,0 +1,4 @@
+CREATE DATABASE FoodDisplay;
+use FoodDisplay;
+CREATE TABLE IF NOT EXISTS foodItems (itemId INT AUTO_INCREMENT, itemName VARCHAR(255),quantity INT,createdItems INT,predictedItems INT,PRIMARY KEY(itemId));
+INSERT INTO foodItems (itemName,quantity,createdItems,predictedItems) VALUES ('Jumbo Chicken Wrap',0,0,0);
